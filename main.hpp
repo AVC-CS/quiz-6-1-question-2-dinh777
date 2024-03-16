@@ -90,7 +90,7 @@ ifstream ifs;
 	for (int i=0; i<empN ; i++){ // to account for all employees
 		ifs >> ID >> name >> dept >> salary ;  // loading each word and line one by one 
 										// from students.txt, note propoer data types for each
-       
+        cout << ID << "\t" << name << "\t" << dept << "\t" << salary << endl ; 
     }
     return(empN);
 
