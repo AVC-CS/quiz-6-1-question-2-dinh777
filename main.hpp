@@ -75,29 +75,24 @@ ifstream ifs;
      ***************************************************/
 
 // make appropriate data type vars that the read data will be stored into
-    int employees ; 
+    int empN ; 
     int ID ; 
     string name ;
     string dept;
     double salary ; 
-
-    int sum = 0 ; // we must initialize sum as 0 to begin with so that line 36 works out for the first run
-    int average ; 
+ 
 
     ifs.open("employee.txt") ;
-    ifs >> employees; // loading first line aka the employees into employee  var declared
+    ifs >> empN; // loading first line aka the employees into employee  var declared
 
     cout << "ID \t" << "Name \t" << "Dept \t" << "Salary \t" << endl;
     
-	for (int i=0; i<employees ; i++){ // to account for all employees
+	for (int i=0; i<empN ; i++){ // to account for all employees
 		ifs >> ID >> name >> dept >> salary ;  // loading each word and line one by one 
 										// from students.txt, note propoer data types for each
-        sum = sum + salary ; 
-        cout << ID << "\t" << name << "\t" << dept << "\t" << salary << endl ; 
+       
     }
-        average = sum/employees ; 
-        cout << "Total: " << sum << "\t" << "Average: " << average << endl ; 
-
+    return(empN);
 
 }
 
